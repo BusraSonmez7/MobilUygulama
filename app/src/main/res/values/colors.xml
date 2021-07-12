@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="sari">#DFBC0D</color>
+    <color name="sari2">#F3D22D</color>
+    <color name="arkaplan">#F3EFD1</color>
+    <color name="gri">#7E7978</color>
+    <color name="turuncu">#FF8A3C</color>
+    <color name="acik_sari">#F1E4B8</color>
+    <color name="tiklama">#DAC173</color>
+    <color name="e">#EFEAC2</color>
+    <color name="sari_transparan">#E1F6F1D9</color>
+    <color name="soz_rengi">#F3224B</color>
+    <color name="sari5">#FFD700</color>
+    <color name="text">#F1EEDE</color>
+    <color name="satirrengi">#FFE6D5</color>
+    <color name="koyugri">#292828</color>
+    <color name="kgri">#FF595756</color>
+    <color name="turuncu_t1">#F98301</color>
+    <color name="gri_t1">#E4E4E4</color>
+    <color name="kgri_t1">#808080</color>
+
+
+</resources>

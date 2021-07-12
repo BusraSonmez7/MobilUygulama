@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".KullaniciKayit">
+
+    <include layout="@layout/toolbar"
+        android:id="@+id/toolbarID"/>
+
+    <TextView
+        android:id="@+id/txtyildiz"
+        android:layout_width="340dp"
+        android:layout_height="34dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="0dp"
+        android:textColor="@color/turuncu"
+        android:text='Lütfen "*" ile belirtilen yerleri doldurunuz. Aksi taktirde kaydınız tamamlanamayacaktır.'
+        android:textSize="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbarID" />
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="380dp"
+        android:layout_height="0dp"
+        android:layout_below="@+id/txtyildiz"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtyildiz">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/profilResmi"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:onClick="ProfilResmiSec"
+                android:src="@drawable/profilekle8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.579"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/liste"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profilResmi">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:id="@+id/txtad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="10dp"
+                        android:text="*Ad:"
+                        android:textColor="@color/gri"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/txtsoyad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="10dp"
+                        android:text="*Soyad:"
+                        android:textColor="@color/gri"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/txtdtarihi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="10dp"
+                        android:text="*Doğum tarihi:"
+                        android:textColor="@color/gri"
+                        android:textSize="@dimen/onsekizdp" />
+
+                    <TextView
+                        android:id="@+id/txtsehir"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Yaşadığınız şehir:"
+                        android:textColor="@color/gri"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/txtcinsiyet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Cinsiyet:"
+                        android:textColor="@color/gri"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/txtmeslek"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Meslek:"
+                        android:textColor="@color/gri"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/txtegitim"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Eğitim durumu:"
+                        android:textColor="@color/gri"
+                        android:textSize="@dimen/onsekizdp" />
+
+                    <TextView
+                        android:id="@+id/txtsite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Web siteniz:"
+                        android:textColor="@color/gri"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/txteposta2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="10dp"
+                        android:text="*E-posta:"
+                        android:textColor="@color/gri"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/txttelefon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Telefon:"
+                        android:textColor="@color/gri"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/txtsifre2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="10dp"
+                        android:text="*Şifre:"
+                        android:textColor="@color/gri"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/txtsifretekrar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="10dp"
+                        android:text="*Şifre tekrarı:"
+                        android:textColor="@color/gri"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/edtad"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/edtxt_border"
+                    android:maxLength="25" />
+
+                <EditText
+                    android:id="@+id/edtsoyad"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/edtxt_border"
+                    android:maxLength="30" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:id="@+id/takvim"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="@dimen/ondp"
+                        android:onClick="Takvim"
+                        android:layout_gravity="center"
+                        app:srcCompat="@drawable/takvim" />
+                    <TextView
+                        android:id="@+id/txttakvim"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:background="@drawable/edtxt_border"
+                        android:gravity="center_vertical"
+                        android:textSize="18sp"
+                        android:visibility="invisible"
+                        android:layout_marginStart="10dp" />
+                </LinearLayout>
+
+                <Spinner
+                    android:id="@+id/spinnersehir"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp" />
+
+                <Spinner
+                    android:id="@+id/spinnercinsiyet"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp" />
+
+                <EditText
+                    android:id="@+id/edtmeslek"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/edtxt_border" />
+
+                <Spinner
+                    android:id="@+id/spinneregitim"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp" />
+
+                <EditText
+                    android:id="@+id/edtweb"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/edtxt_border" />
+
+                <EditText
+                    android:id="@+id/edteposta"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/edtxt_border"
+                    android:inputType="textEmailAddress" />
+
+                <EditText
+                    android:id="@+id/edttelefon"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/edtxt_border"
+                    android:inputType="phone"
+                    android:maxLength="11" />
+
+                <EditText
+                    android:id="@+id/edtsifre"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/edtxt_border"
+                    android:inputType="textPassword" />
+
+                <EditText
+                    android:id="@+id/edtsifre2"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/edtxt_border"
+                    android:inputType="textPassword" />
+
+            </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lbuton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/liste">
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="140dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/btn_tiklama_vazgec"
+                    android:gravity="center|center_vertical"
+                    android:onClick="Vazgec"
+                    android:text="VAZGEÇ"
+                    android:layout_gravity="top"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                    android:layout_marginBottom="50dp"/>
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="140dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/btn_tiklama"
+                    android:gravity="center"
+                    android:onClick="UyeOl"
+                    android:text="KAYIT OL"
+                    android:layout_gravity="top"
+                    android:layout_marginStart="20dp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/onsekizdp"
+                    android:layout_marginBottom="50dp"
+                    />
+
+
+            </LinearLayout>
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

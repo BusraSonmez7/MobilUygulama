@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".KitapOzellikleriActivity">
+
+    <include layout="@layout/toolbar"
+        android:id="@+id/toolbarID"/>
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingBottom="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarID"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+
+            <TextView
+                android:id="@+id/txtad2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:text="*Kitap Adı:"
+                android:textColor="@color/gri"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/resimekle2" />
+
+            <TextView
+                android:id="@+id/txtyazar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="*Yazarı:"
+                android:textColor="@color/gri"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtad2" />
+
+            <TextView
+                android:id="@+id/txttur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="*Türü:"
+                android:textColor="@color/gri"
+                android:textSize="@dimen/onsekizdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtyazar" />
+
+            <TextView
+                android:id="@+id/txtsayfa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="*Sayfa Sayısı:"
+                android:textColor="@color/gri"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txttur" />
+
+            <TextView
+                android:id="@+id/txtdurum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Kitap Durumu:"
+                android:textColor="@color/gri"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtsayfa" />
+
+            <TextView
+                android:id="@+id/txtpuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Kitaba Puanın:"
+                android:textColor="@color/gri"
+                android:textSize="18sp"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtokumatarihi" />
+
+            <TextView
+                android:id="@+id/txtokumatarihi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Eklenme/Okuma Tarihi:"
+                android:textColor="@color/gri"
+                android:textSize="18sp"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerdurumu" />
+
+            <TextView
+                android:id="@+id/txtozet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="Kitap Özeti:"
+                android:textColor="@color/gri"
+                android:textSize="@dimen/onsekizdp"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtpuan" />
+
+
+            <EditText
+                android:id="@+id/edtkadi"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/edtxt_border"
+                android:enabled="false"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txtad2"
+                app:layout_constraintTop_toBottomOf="@+id/resimekle2" />
+
+            <EditText
+                android:id="@+id/edtyazar"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/edtxt_border"
+                android:enabled="false"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/edtkadi"
+                app:layout_constraintTop_toBottomOf="@+id/edtkadi" />
+
+            <Spinner
+                android:id="@+id/spinnerTuru"
+                android:layout_width="130dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="@+id/edtyazar"
+                app:layout_constraintTop_toBottomOf="@+id/edtyazar" />
+
+            <EditText
+                android:id="@+id/edtsayfa"
+                android:layout_width="120dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="13dp"
+                android:background="@drawable/edtxt_border"
+                android:enabled="false"
+                android:gravity="left"
+                android:inputType="number"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toEndOf="@+id/txtsayfa"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerTuru" />
+
+            <Spinner
+                android:id="@+id/spinnerdurumu"
+                android:layout_width="130dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="@+id/edtsayfa"
+                app:layout_constraintTop_toBottomOf="@+id/edtsayfa" />
+
+            <Spinner
+                android:id="@+id/spinnerpuan"
+                android:layout_width="90dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="@+id/spinnerdurumu"
+                app:layout_constraintTop_toBottomOf="@+id/txtokumatarihi" />
+
+            <ImageView
+                android:id="@+id/resimekle2"
+                android:layout_width="211dp"
+                android:layout_height="254dp"
+                android:layout_marginTop="30dp"
+                android:onClick="ResimEkle"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.475"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/resim_ekleme_iconu" />
+
+            <ImageView
+                android:id="@+id/resimekle3"
+                android:layout_width="211dp"
+                android:layout_height="254dp"
+                android:layout_marginTop="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.475"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/resim_ekleme_iconu" />
+
+            <TextView
+                android:id="@+id/txtokumatarihi2"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/edtxt_border"
+                android:enabled="false"
+                android:paddingLeft="10dp"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/takvim"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerdurumu" />
+
+            <ImageView
+                android:id="@+id/takvim"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="@dimen/ondp"
+                android:layout_marginTop="20dp"
+                android:onClick="Takvim"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toStartOf="@+id/txtokumatarihi2"
+                app:layout_constraintStart_toEndOf="@+id/txtokumatarihi"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerdurumu"
+                app:srcCompat="@drawable/takvim" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edtozet"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="start"
+                android:paddingLeft="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtozet">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtozet2"
+                    android:layout_width="match_parent"
+                    android:layout_height="190dp"
+                    android:layout_gravity="fill"
+                    android:background="@drawable/edt_arkaplan"
+                    android:textColor="@color/black"
+                    android:enabled="false"
+                    android:padding="10dp"
+                    android:gravity="left"
+                    android:hint=""
+                    android:visibility="invisible"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtokumatarihi">
+
+
+                <Button
+                    android:id="@+id/btnvazgec2"
+                    android:layout_width="140dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/btn_tiklama_vazgec"
+                    android:gravity="center|center_vertical"
+                    android:onClick="Vazgec"
+                    android:text="VAZGEÇ"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                    android:visibility="invisible"
+                    app:layout_constraintStart_toStartOf="@+id/txtpuan"
+                    app:layout_constraintTop_toBottomOf="@+id/txtdurum" />
+
+
+                <Button
+                    android:id="@+id/btnguncelle2"
+                    android:layout_width="140dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/btn_tiklama"
+                    android:gravity="center|center_vertical"
+                    android:onClick="KitapGuncelle"
+                    android:text="GÜNCELLE"
+                    android:layout_marginStart="20dp"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                    android:visibility="invisible"
+                     />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edtozet">
+
+            <Button
+                android:id="@+id/btnvazgec"
+                android:layout_width="140dp"
+                android:layout_height="50dp"
+                android:background="@drawable/btn_tiklama_vazgec"
+                android:gravity="center|center_vertical"
+                android:onClick="Vazgec"
+                android:text="VAZGEÇ"
+                android:textColor="@color/white"
+                android:textSize="18dp"
+                android:visibility="invisible"
+                />
+
+                <Button
+                    android:id="@+id/btnguncelle"
+                    android:layout_width="140dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/btn_tiklama"
+                    android:gravity="center|center_vertical"
+                    android:onClick="KitapGuncelle"
+                    android:text="GÜNCELLE"
+                    android:layout_marginStart="20dp"
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                    android:visibility="invisible"
+                    />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

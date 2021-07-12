@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <include layout="@layout/toolbar"
+        android:id="@+id/toolbarID"/>
+
+    <TextView
+        android:id="@+id/txteposta2"
+        android:layout_width="336dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="40dp"
+        android:text="E-posta Adresi:"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbarID" />
+
+    <TextView
+        android:id="@+id/txtsifre"
+        android:layout_width="336dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="30dp"
+        android:text="Şifre:"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtEposta" />
+
+    <Button
+        android:id="@+id/btn_girisyap"
+        android:layout_width="341dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/btn_tiklama"
+        android:gravity="center"
+        android:onClick="GirisYap"
+        android:text="GİRİŞ YAP"
+        android:textColor="@color/white"
+        android:textSize="@dimen/onsekizdp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtSifre" />
+
+    <EditText
+        android:id="@+id/edtSifre"
+        android:layout_width="336dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/edtxt_border"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:paddingLeft="@dimen/ondp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtsifre" />
+
+    <EditText
+        android:id="@+id/edtEposta"
+        android:layout_width="336dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/edtxt_border"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="@dimen/ondp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txteposta2" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="336dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/btn_tiklama_sari"
+        android:gravity="center_vertical"
+        android:onClick="UyeOl"
+        android:paddingLeft="@dimen/ondp"
+        android:text="Üye Ol                                                  >"
+        android:textColor="@color/sari"
+        android:textSize="@dimen/onsekizdp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_girisyap" /><![CDATA[
+
+
+
+
+
+    />
+
+
+
+]]>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/anasayfa"
+        android:orderInCategory="200"
+        android:title="Anasayfa"
+        ></item>
+    <item
+        android:id="@+id/duzenle"
+        android:orderInCategory="200"
+        android:title="Düzenle"
+        ></item>
+    <item
+        android:id="@+id/sil"
+        android:orderInCategory="200"
+        android:title="Hesabı Sil"
+        ></item>
+    <item
+        android:id="@+id/cikis"
+        android:orderInCategory="200"
+        android:title="Oturumu kapat"
+        ></item>
+</menu>
